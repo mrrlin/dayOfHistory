@@ -3808,6 +3808,9 @@ html, body {
   .list-days-text {
     font-size: 2.5rem;
   }
+  .cards-events {
+    width: 570px;
+  }
   .card {
     width: 90%;
     justify-content: center;
@@ -3838,5 +3841,14 @@ html, body {
     width: 270px;
     left: 24px;
     font-size: 1.7rem;
+  }
+  .swiper-container {
+    width: 290px;
+  }
+  .swiper-button-prev {
+    left: 30px;
+  }
+  .swiper-button-next {
+    right: 30px;
   }
 }

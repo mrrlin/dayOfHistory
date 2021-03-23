@@ -47,29 +47,23 @@ AppAsset::register($this);
             case 11: $tmp_str = "ноябрь"; break;
             case 12: $tmp_str = "декабрь"; break;
         }
-        $tmp_symb = substr($cur_month, -1);
-        //echo $tmp_symb;
-        if($tmp_symb === "0" || $tmp_symb === "1" || $tmp_symb === "2" 
-        || $tmp_symb === "4" || $tmp_symb === "6" || $tmp_symb === "7" 
-        || $tmp_symb === "9") {
-            $pattern = "/ь/";
-            $replace = "я";
-            $month = preg_replace($pattern, $replace, $tmp_str);
+        $tmp_symb = mb_substr($tmp_str, -1);
+        if($tmp_symb == "ь") {
+            $month = str_replace("ь", "я", $tmp_str);
             return $month;
+            // $pattern = "/ь/";
+            // $replace = "я";
+            // $month = preg_replace($pattern, $replace, $tmp_str);
+            // return $month;
         }
-        if($tmp_symb === "3" || $tmp_symb === "8" ) {
+        if($tmp_symb == "т") {
             $month = str_replace("т", "та", $tmp_str);
             return $month;
-            // $pattern = "/т/";
-            // $replace = "та";
-            // $month = preg_replace($pattern, $replace, $tmp_str);
+        }
+        if($tmp_symb === "й") {
+            $month = str_replace("й", "я", $tmp_str);
             return $month;
         }
-        // if($tmp_symb === "й") {
-        //     $pattern = "/й/";
-        //     $replace = "я";
-        //     $month = preg_replace($pattern, $replace, $tmp_str);
-        // }
     }
 ?>
     <header class="header">
