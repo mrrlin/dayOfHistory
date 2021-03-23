@@ -1,0 +1,214 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../scss/breakpoints.scss"; /*Overriding screen width variables*/
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/code";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/utilities";
+/*fonts*/
+@font-face {
+    font-family: 'Isadora';
+    src: url(../fonts/1IsadoraMBold.ttf);
+}
+@font-face {
+    font-family: 'TrebuchetMS';
+    src: url(../fonts/TrebuchetMS.ttf);
+}
+html, body{
+    overflow-x: hidden
+}
+.header {
+    background: url(../img/backgroundHeader.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1000;
+    height: 200px;
+}
+.bookmark {
+    display: inline;
+    width: 130px;
+    height: 270px;
+    opacity: 0.75;
+    position: absolute;
+    left: 100px;
+}
+.bookmark-text-day {
+    width: 700px;
+    position: absolute;
+    font-family: 'TrebuchetMS';
+    color: #fcfbfa;
+    top: 140px;
+    left: 145px;
+    font-size: 2rem;
+    text-shadow: .07em 0 grey;
+}
+.bookmark-text-month {
+    width: 700px;
+    position: absolute;
+    font-family: 'TrebuchetMS';
+    color: #fcfbfa;
+    top: 185px;
+    left: 115px;
+    font-size: 1.5rem;
+    text-shadow: .07em 0 grey;
+}
+.page-title {
+    width: 700px;
+    position: absolute;
+    font-family: 'Isadora';
+    color: #fbfaf9;
+    top: 35px;
+    left: 116px;
+    font-size: 2.7rem;
+    -webkit-text-stroke: .035em #493f35;
+}
+.page-title-bottom {
+    width: 700px;
+    position: absolute;
+    font-family: 'Isadora';
+    color: #fbfaf9; 
+    top: 85px;
+    left: 280px;
+    font-size: 2.7rem;
+    -webkit-text-stroke: .035em #493f35;
+}
+.body-background {
+    background: url(../img/backgroundMain.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    z-index: 100;
+    margin-top: -15px;
+}
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 25px;
+    position: absolute;
+    right: 20px;
+    left: auto;
+    
+    @include media-breakpoint-down(md) {
+        right: 25px;
+    }
+}
+.menu-active {
+    background: url(../img/circle-red.png);
+        background-repeat: no-repeat;
+        background-size: 252px 68px;
+}
+.menu-item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 252px;
+    height: 75px;
+}
+.menu-item-icon {
+    width: 50px;
+
+    @include media-breakpoint-down(md) {
+        width: 40px;
+    }
+}
+.menu-ref {
+    text-decoration: none;
+    color: #493f35;
+}
+.menu-item-text {
+    display: inline;
+    font-family: 'TrebuchetMS';
+    padding-left: 15px;
+    &:hover {
+        text-decoration: none;
+        color: #493f35;
+    }
+
+    @include media-breakpoint-down(md) {
+        font-size: 1rem;
+    }
+}
+.days-week {
+    padding-top: 85px;
+}
+i {
+    border: solid #493f35;
+    border-width: 0px 3px 3px 0;
+    display: inline-block;
+    padding: 8px;
+}
+.arrow-left {
+    transform: rotate(135deg);
+    margin-right: -5px;
+}
+.arrow-right {
+    transform: rotate(-45deg);
+    margin-left: -30px;
+}
+.list-days {
+    list-style: none;
+    display: inline;
+    &-text {
+        display: inline;
+        font-family: 'Isadora';
+        color: #493f35;
+        font-size: 3rem;
+        margin-right: 70px;
+
+        @include media-breakpoint-down(md) {
+            font-size: 2.7rem;
+        }
+    }
+}
+.cards-events {
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 15px;
+    p {
+        margin: 0;
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 660px;
+    }
+}
+.card {
+    height: 80px;
+    background: #faf9f7;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    opacity: 0.9;
+    padding: 0px 115px 0 55px;
+    &:hover {
+        background: #b09a85;
+        .card-item-text {
+            color: #faf9f7;
+        }
+    }
+    &-item-icon {
+        width: 45px;
+    }
+    &-item-text {
+        font-family: 'TrebuchetMS';
+        color: #97857b;
+        padding-left: 15px;
+        font-size: 0.8rem;
+    }
+}
+.footer-text {
+    color: #493f35;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-top: 85px;
+
+    @include media-breakpoint-down(md) {
+        font-size: 0.9rem;
+    }
+}
