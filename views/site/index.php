@@ -6,32 +6,80 @@
  */
 $this->title = 'Day';
 ?>
-<ul class="menu text-center"> 
-    <li class="menu-item">
-        <img class="menu-item-icon" src="img/icon-main.png" alt="icon">
-        <a class="menu-ref" href="#">
-            <p class="menu-item-text">Главная</p>
-        </a>
-    </li>
-    <li class="menu-item">
-        <img class="menu-item-icon" src="img/icon-all-days-month.png" alt="icon">
-        <a class="menu-ref" href="#">
-            <p class="menu-item-text">Все даты месяца</p>
-        </a>
-    </li>
-    <li class="menu-item">
-        <img class="menu-item-icon" src="img/icon-important-days.png" alt="icon">
-        <a class="menu-ref" href="#">
-            <p class="menu-item-text">Важные даты года</p>
-        </a>
-    </li>
-    <li class="menu-item">
-        <img class="menu-item-icon" src="img/icon-about-project.png" alt="icon">
-        <a class="menu-ref" href="#">
-            <p class="menu-item-text">О проекте</p>
-        </a>
-    </li>
-</ul>
+
+<div class="menu-icon">
+    <span class="menu-icon__line"></span>
+    <span class="menu-icon__line"></span>
+    <span class="menu-icon__line"></span>
+</div>
+
+<div class="drop-down">
+<div class="drop-down__top">
+    <div class="center">
+        <div class="drop-down__top-inside">
+            <div class="drop-down__close"></div>
+                <div class="city__popup">
+                    <ul class="menu text-center"> 
+                        <li class="menu-item">
+                            <img class="menu-item-icon" src="img/icon-main.png" alt="icon">
+                            <a class="menu-ref" href="#">
+                                <p class="menu-item-text">Главная</p>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <img class="menu-item-icon" src="img/icon-all-days-month.png" alt="icon">
+                            <a class="menu-ref" href="#">
+                                <p class="menu-item-text">Все даты месяца</p>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <img class="menu-item-icon" src="img/icon-important-days.png" alt="icon">
+                            <a class="menu-ref" href="#">
+                                <p class="menu-item-text">Важные даты года</p>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <img class="menu-item-icon" src="img/icon-about-project.png" alt="icon">
+                            <a class="menu-ref" href="#">
+                                <p class="menu-item-text">О проекте</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<nav class="main-menu">
+    <ul class="menu text-center"> 
+        <li class="menu-item">
+            <img class="menu-item-icon" src="img/icon-main.png" alt="icon">
+            <a class="menu-ref" href="#">
+                <p class="menu-item-text">Главная</p>
+            </a>
+        </li>
+        <li class="menu-item">
+            <img class="menu-item-icon" src="img/icon-all-days-month.png" alt="icon">
+            <a class="menu-ref" href="#">
+                <p class="menu-item-text">Все даты месяца</p>
+            </a>
+        </li>
+        <li class="menu-item">
+            <img class="menu-item-icon" src="img/icon-important-days.png" alt="icon">
+            <a class="menu-ref" href="#">
+                <p class="menu-item-text">Важные даты года</p>
+            </a>
+        </li>
+        <li class="menu-item">
+            <img class="menu-item-icon" src="img/icon-about-project.png" alt="icon">
+            <a class="menu-ref" href="#">
+                <p class="menu-item-text">О проекте</p>
+            </a>
+        </li>
+    </ul>
+</nav>
 <?php
     $currentDay = new DateTimeImmutable();
     $yesterday = $currentDay->sub(new DateInterval("P1D"));
