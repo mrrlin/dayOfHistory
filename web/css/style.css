@@ -3725,7 +3725,7 @@ html, body {
   left: 290px;
   right: auto;
   color: #493f35;
-  top: 335px !important;
+  top: 310px !important;
 }
 .swiper-button-prev:focus {
   outline: none;
@@ -3734,7 +3734,7 @@ html, body {
   right: 290px;
   left: auto;
   color: #493f35;
-  top: 335px !important;
+  top: 310px !important;
 }
 .swiper-button-next:focus {
   outline: none;
@@ -3820,9 +3820,6 @@ html, body {
     color: #97857b;
     padding-left: 15px;
     font-size: 0.8rem; }
-.footer {
-  height: 135px;
-}
 .footer-text {
   color: #493f35;
   font-size: 1rem;
@@ -3887,10 +3884,19 @@ html, body {
   }
   .menu {
     display: grid;
+    justify-content: flex-start;
+    left: -65px;
   }
   .main-menu {
     display: none;
   }
+  .menu-item {
+    width: 245px;
+    justify-content: flex-start;
+  }
+  .menu-item-icon {
+    margin-left: 50px;
+}
   .list-days-text {
     font-size: 2.5rem;
   }
@@ -3905,8 +3911,13 @@ html, body {
   }
   .card {
     width: 90%;
-    justify-content: center;
+    padding: 0 10px 0 0;
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
+  .card-item-icon {
+    margin-left: 10px;
+}
 }
 @media(max-width: 576px) {
   .bookmark {
@@ -3946,15 +3957,14 @@ html, body {
   .cards-events {
     width: 295px;
   }
-  .card {
-    width: 90%;
-    padding: 0;
-    margin: auto;
-    margin-bottom: 20px;
+  .body-background .container {
+    padding: 0 20px 0 20px;
   }
-  .menu {
-    justify-content: flex-start;
-    left: -65px;
+  .card {
+    width: auto;
+    height: 100%;
+    padding: 0;
+    margin: 0 20px 20px 20px;
   }
   .menu-icon {
     left: 125px;
@@ -3968,5 +3978,8 @@ html, body {
   .menu-item-icon {
     width: 32px;
     margin-left: 50px;
-}
+  }
+  .menu-item-text {
+    font-size: 0.7rem;
+  }
 }

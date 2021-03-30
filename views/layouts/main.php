@@ -79,13 +79,13 @@ AppAsset::register($this);
     <div class="body-background">
         <div class="container">
             <?= $content ?>
+            <footer class="footer">
+                <div class="container">
+                    <p class="footer-text text-center">© ГБУК "Владимирская областная научная библиотека". 2017 - 2019</p>
+                </div>
+            </footer>
         </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="footer-text text-center">© ГБУК "Владимирская областная научная библиотека". 2017 - 2019</p>
-    </div>
-</footer>
 </div>
 <?php $this->endBody() ?>
 </body>
