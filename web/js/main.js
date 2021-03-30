@@ -33,12 +33,13 @@ const swiper = new Swiper('.swiper-container', {
       centeredSlides: true
     },
     576: {
-      slidesPerView: 2,
-      centeredSlides: false
-      // spaceBetween: 50
+      slidesPerView: 1,
+      centeredSlides: true
     },
-    1020: {
-      slidesPerView: 3
+    870: {
+      slidesPerView: 3,
+      centeredSlides: false,
+      initialSlide: 1
     }
   }
 });
