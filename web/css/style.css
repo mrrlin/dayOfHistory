@@ -3545,7 +3545,10 @@ html, body {
   background-position: center;
   z-index: 1000;
   height: 200px; }
-
+.header .container {
+  min-width: 100%;
+  position: relative;
+}
 .bookmark {
   display: inline;
   width: 130px;
@@ -3602,9 +3605,12 @@ html, body {
   background-position: center 180px;
   background-attachment: fixed;
   z-index: 100;
-  height: 100vh ;
+  min-height: 100vh;
+  height: auto;
   margin-top: -15px; }
-
+.menu-text {
+  display: none;
+}
 .menu {
   display: flex;
   justify-content: flex-end;
@@ -3721,11 +3727,14 @@ html, body {
 
 .days-week {
   padding-top: 120px; }
+.sw-nav {
+  position: relative;
+}
 .swiper-button-prev {
   left: 290px;
   right: auto;
   color: #493f35;
-  top: 310px !important;
+  top: -50px !important;
 }
 .swiper-button-prev:focus {
   outline: none;
@@ -3734,7 +3743,7 @@ html, body {
   right: 290px;
   left: auto;
   color: #493f35;
-  top: 310px !important;
+  top: -50px !important;
 }
 .swiper-button-next:focus {
   outline: none;
@@ -3869,6 +3878,13 @@ html, body {
     left: 190px;
     font-size: 2.1rem;
   }
+  .menu-text {
+    display: block;
+    margin-left: 45px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 24px;
+  }
   .menu-icon {
     display: flex;
     position: absolute;
@@ -3885,14 +3901,15 @@ html, body {
   .menu {
     display: grid;
     justify-content: flex-start;
-    left: -65px;
+    left: -15px;
   }
   .main-menu {
     display: none;
   }
   .menu-item {
-    width: 245px;
+    width: 255px;
     justify-content: flex-start;
+    margin-top: 5px;
   }
   .menu-item-icon {
     margin-left: 50px;
@@ -3906,6 +3923,9 @@ html, body {
   .swiper-button-next {
     right: 55px;
   }
+  .swiper-container {
+    width: 570px;
+  }
   .cards-events {
     width: 570px;
   }
@@ -3917,7 +3937,7 @@ html, body {
   }
   .card-item-icon {
     margin-left: 10px;
-}
+  }
 }
 @media(max-width: 576px) {
   .bookmark {
@@ -3966,20 +3986,26 @@ html, body {
     padding: 0;
     margin: 0 20px 20px 20px;
   }
+  .cards-events {
+    width: auto;
+  }
+  .cards-events p {
+    margin: 10px;
+  }
   .menu-icon {
     right: 25px;
   }
-  .menu-item {
-    justify-content: flex-start;
-  }
   .drop-down {
-    left: 125px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
   }
   .menu-item-icon {
     width: 32px;
     margin-left: 50px;
   }
   .menu-item-text {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 }
