@@ -81,7 +81,7 @@ AppAsset::register($this);
             <?= $content ?>
             <footer class="footer">
                 <div class="container">
-                    <p class="footer-text text-center">© ГБУК "Владимирская областная научная библиотека". 2017 - 2019</p>
+                    <p class="footer-text text-center">© ГБУК "Владимирская областная научная библиотека". <?= date('Y');?></p>
                 </div>
             </footer>
         </div>

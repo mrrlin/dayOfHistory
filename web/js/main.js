@@ -3,16 +3,6 @@ $('ul li.menu-item').on('click', function(){
     $(this).addClass('menu-active')
 })
 
-$('.menu-icon').on('click', function() {
-  $('body').addClass('no-scroll');
-  $('.drop-down').addClass('drop-down--open');
-});
-
-$('.drop-down__close').on('click', function() {
-  $('body').removeClass('no-scroll');
-  $('.drop-down').removeClass('drop-down--open');
-});
-
 const swiper = new Swiper('.swiper-container', {
   // Optional parameters
   slidesPerView: 3,

@@ -6,77 +6,33 @@
  */
 $this->title = 'Day';
 ?>
+<nav class="navbar navbar-expand-lg navbar-light menu menu-mobile">
+  <button class="navbar-toggler menu-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<div class="menu-icon">
-    <span class="menu-icon__line"></span>
-    <span class="menu-icon__line"></span>
-    <span class="menu-icon__line"></span>
-</div>
-
-</div>
-<nav class="main-menu">
-    <ul class="menu text-center"> 
-        <li class="menu-item">
-            <img class="menu-item-icon" src="img/icon-main.png" alt="icon">
-            <a class="menu-ref" href="#">
-                <p class="menu-item-text">Главная</p>
-            </a>
-        </li>
-        <li class="menu-item">
-            <img class="menu-item-icon" src="img/icon-all-days-month.png" alt="icon">
-            <a class="menu-ref" href="#">
-                <p class="menu-item-text">Все даты месяца</p>
-            </a>
-        </li>
-        <li class="menu-item">
-            <img class="menu-item-icon" src="img/icon-important-days.png" alt="icon">
-            <a class="menu-ref" href="#">
-                <p class="menu-item-text">Важные даты года</p>
-            </a>
-        </li>
-        <li class="menu-item">
-            <img class="menu-item-icon" src="img/icon-about-project.png" alt="icon">
-            <a class="menu-ref" href="#">
-                <p class="menu-item-text">О проекте</p>
-            </a>
-        </li>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto menu-list">
+      <li class="nav-item menu-item">
+        <img class="menu-item-icon" src="img/icon-main.png" alt="icon">
+        <a class="nav-link menu-item-text" href="#">Главная</a>
+      </li>
+      <li class="nav-item menu-item">
+        <img class="menu-item-icon" src="img/icon-all-days-month.png" alt="icon">
+        <a class="nav-link menu-item-text" href="#">Все даты месяца</a>
+      </li>
+      <li class="nav-item menu-item">
+        <img class="menu-item-icon" src="img/icon-important-days.png" alt="icon">
+        <a class="nav-link menu-item-text" href="#">Важные даты года</a>
+      </li>
+      <li class="nav-item menu-item">
+        <img class="menu-item-icon" src="img/icon-about-project.png" alt="icon">
+        <a class="nav-link menu-item-text" href="#">О проекте</a>
+      </li>
     </ul>
+  </div>
 </nav>
-<div class="drop-down">
-<div class="drop-down__top">
-    <div class="center">
-        <div class="drop-down__close">
-            <p class="menu-text">Меню</p>
-        </div>
-            <ul class="menu text-center"> 
-                <li class="menu-item">
-                    <img class="menu-item-icon" src="img/icon-main.png" alt="icon">
-                    <a class="menu-ref" href="#">
-                        <p class="menu-item-text">Главная</p>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <img class="menu-item-icon" src="img/icon-all-days-month.png" alt="icon">
-                    <a class="menu-ref" href="#">
-                        <p class="menu-item-text">Все даты месяца</p>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <img class="menu-item-icon" src="img/icon-important-days.png" alt="icon">
-                    <a class="menu-ref" href="#">
-                        <p class="menu-item-text">Важные даты года</p>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <img class="menu-item-icon" src="img/icon-about-project.png" alt="icon">
-                    <a class="menu-ref" href="#">
-                        <p class="menu-item-text">О проекте</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+
 <?php
     $currentDay = new DateTimeImmutable();
     $yesterday = $currentDay->sub(new DateInterval("P1D"));
